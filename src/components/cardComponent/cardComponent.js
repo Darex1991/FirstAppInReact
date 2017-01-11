@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Profile from '../stateless_components/statelessComponents';
 
 class CardComponent extends Component {
