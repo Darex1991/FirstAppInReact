@@ -1,7 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import Profile from '../stateless_components/statelessComponents';
+import Profile from './statelessComponents';
 
-class CardComponent extends Component {
+export default class CardComponent extends Component {
+  static get propTypes() {
+    return {
+      item: PropTypes.object.isRequired
+    }
+  }
 
   render() {
     return (
@@ -11,5 +16,3 @@ class CardComponent extends Component {
     );
   }
 }
-
-export default CardComponent;

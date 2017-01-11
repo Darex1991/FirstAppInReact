@@ -21,7 +21,9 @@ class WebpackDevConfig extends WebpackBaseConfig {
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
-      ]
+      ],
+      performance: { hints: false }
+
     };
   }
 }
