@@ -12,13 +12,16 @@ export default class CardList extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { cards: this.props.cards, props: this.props };
+    this.state = {
+      cards: this.props.cards
+    };
     this.pushSendArray();
   }
 
   pushSendArray() {
     debounce(() => {
       const card = { id: (new Date()).getTime(), name: 'test' };
+      console.log(this.props.addNewCard,'this.props.addNewCard');
       this.props.addNewCard(card);
     }, 3000)();
   };

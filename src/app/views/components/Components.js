@@ -11,9 +11,7 @@ class Components extends Component {
     super(props);
     this.state = {
       animated: true,
-      viewEntersAnim: true
-    };
-    this.state  = {
+      viewEntersAnim: true,
       cards: [
         {
           id: 1,
@@ -56,7 +54,7 @@ class Components extends Component {
             height: 1200
           }}>
           <div className="index">
-            <NewCardForm cards={this.state.cards} />
+            <NewCardForm cards={this.state.cards} addNewCard={this.addNewCard}  />
             <CardList cards={this.state.cards} addNewCard={this.addNewCard} />
           </div>
         </div>

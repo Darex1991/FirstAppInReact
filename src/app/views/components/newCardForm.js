@@ -28,12 +28,13 @@ export default class NewCardForm extends Component {
   submitFunction(event){
     event.preventDefault();
     // const newCard = { id: 123123, name: this.state.name, description: this.state.description };
-    this.props.addCard(this.state.newCard);
+    this.props.addNewCard(this.state.newCard);
     this.setState({newCard: this.defaultNewCard()});
   };
-  debugger(sth){
-    debugger
-  }
+
+  handleChange = (event) => {
+    this.setState({[event.target.name]: event.target.value});
+  };
   // handleNameChanges(event){
   //   this.setState({name: event.target.value});
   // };
@@ -47,12 +48,12 @@ export default class NewCardForm extends Component {
       <form onSubmit={this.handleSubmit} name="test">
         <label>
           Name:
-          <input type="text" name="name" value={this.state.newCard.name} onChange={(e) => this.setState({name: e.target.value}) }/>
+          <input type="text" name="name" onChange={this.handleChange}/>
         </label>
 
         <label>
           Description:
-          <input type="text" name="description" onChange={this.handleDescriptionChanges}/>
+          <input type="text" name="description" onChange={this.handleChange}/>
         </label>
 
         <input type="submit" value="Submit" />
