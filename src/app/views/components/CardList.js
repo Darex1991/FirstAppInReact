@@ -12,9 +12,6 @@ export default class CardList extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      cards: this.props.cards
-    };
     this.pushSendArray();
   }
 
@@ -29,7 +26,7 @@ export default class CardList extends Component {
   render() {
     return (
       <div>
-        { this.state.cards.map(item => <CardComponent key={item.id} item={item}/>) }
+        { this.props.cards.map(item => <CardComponent key={item.id} item={item}/>) }
       </div>
     )
   }
