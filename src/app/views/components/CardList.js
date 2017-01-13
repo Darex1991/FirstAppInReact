@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {debounce} from "lodash";
 
 import CardComponent from './cardComponent';
+import CardsFunctions from "../services/CardsFunctions";
 
 export default class CardList extends Component {
   static get propTypes() {
@@ -17,8 +18,7 @@ export default class CardList extends Component {
 
   pushSendArray() {
     debounce(() => {
-      const card = { id: (new Date()).getTime(), name: 'test' };
-      console.log(this.props.addNewCard,'this.props.addNewCard');
+      const card = { id: CardsFunctions.nextId(this.props.cards), name: 'test' };
       this.props.addNewCard(card);
     }, 3000)();
   };

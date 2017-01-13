@@ -1,47 +1,42 @@
 import React, {PropTypes, Component} from 'react';
 
+import CardsFunctions from "../services/CardsFunctions";
+
 export default class NewCardForm extends Component {
-  static get propTypes() {
-    return {
-      cards: PropTypes.array.isRequired
-    };
+  static propTypes = {
+    cards: PropTypes.array.isRequired
   };
 
   constructor(props){
     super(props);
     this.handleSubmit = this.submitFunction.bind(this);
-    // this.handleNameChanges = this.handleNameChanges.bind(this);
-    // this.handleDescriptionChanges = this.handleDescriptionChanges.bind(this);
     this.state = {
       newCard: this.defaultNewCard(),
     };
   };
 
-  defaultNewCard() {
+  defaultNewCard = () => {
     return {
-      id: (new Date()).getTime(),
       name: '',
       description: '',
     };
-  }
+  };
 
-  submitFunction(event){
-    event.preventDefault();
-    // const newCard = { id: 123123, name: this.state.name, description: this.state.description };
-    this.props.addNewCard(this.state.newCard);
+  submitFunction = (event) => {
+    const newCard = this.state.newCard;
+    newCard.id = CardsFunctions.nextId(this.props.cards);
+    this.props.addNewCard(newCard);
     this.setState({newCard: this.defaultNewCard()});
+    event.preventDefault();
   };
 
   handleChange = (event) => {
-    this.setState({[event.target.name]: event.target.value});
+    let card = this.state.newCard;
+    let eventName = event.target.name;
+    let eventValue = event.target.value;
+    const newCard = Object.assign(card, {[eventName]: eventValue });
+    this.setState({newCard: newCard});
   };
-  // handleNameChanges(event){
-  //   this.setState({name: event.target.value});
-  // };
-  //
-  // handleDescriptionChanges(event){
-  //   this.setState({description: event.target.value});
-  // };
 
   render() {
     return (
