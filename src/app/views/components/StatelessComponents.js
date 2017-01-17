@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './statelessComponents.sass'
 
 export default class Profile extends Component {
   static propTypes = {
     item: React.PropTypes.object
-  }
+  };
 
   isSelected = (role) => {
     return this.props.selectedRole === role;
@@ -15,7 +15,7 @@ export default class Profile extends Component {
     return (
       <div className="statelessComponents">
         <div className="small">
-          <img src="http://pipsum.com/310x310.jpg" alt="test" />
+          <img src="http://pipsum.com/310x310.jpg" alt="test"/>
         </div>
         <div className="big">
           <h1>{ newItem.name }</h1>

@@ -31,6 +31,7 @@ class Components extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
+
   addNewCard = (card) => {
     const cards = [...this.state.cards, card];
     this.setState({cards});
@@ -45,8 +46,8 @@ class Components extends Component {
   };
 
   render() {
-    const { animated, viewEntersAnim } = this.state;
-    return(
+    const {animated, viewEntersAnim} = this.state;
+    return (
       <div
         className={cx({
           'animatedViews': animated,
@@ -61,8 +62,8 @@ class Components extends Component {
             height: 1200
           }}>
           <div className="index">
-            <NewCardForm cards={this.state.cards} addNewCard={this.addNewCard}  />
-            <CardList cards={this.state.cards} addNewCard={this.addNewCard} editCard={this.editCard} />
+            <NewCardForm cards={this.state.cards} addNewCard={this.addNewCard}/>
+            <CardList cards={this.state.cards} addNewCard={this.addNewCard} editCard={this.editCard}/>
           </div>
         </div>
       </div>

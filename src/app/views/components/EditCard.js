@@ -17,7 +17,7 @@ export default class EditCard extends Component {
   handleChange = (event) => {
     let eventName = event.target.name;
     let eventValue = event.target.value;
-    const changedCard = Object.assign(this.state.changedCard, {[eventName]: eventValue });
+    const changedCard = Object.assign(this.state.changedCard, {[eventName]: eventValue});
     this.setState({changedCard});
   };
 
@@ -31,14 +31,15 @@ export default class EditCard extends Component {
       <form onSubmit={this.handleSubmit} name={this.props.item.id}>
         <label>
           Name:
-          <input type="text" name="name" value={this.state.changedCard.name} onChange={this.handleChange} />
+          <input type="text" name="name" value={this.state.changedCard.name} onChange={this.handleChange}/>
         </label>
 
         <label>
           Description:
-          <input type="text" name="description" value={this.state.changedCard.description} onChange={this.handleChange}/>
+          <input type="text" name="description" value={this.state.changedCard.description}
+                 onChange={this.handleChange}/>
         </label>
-        <input type="submit" value="Submit edit" />
+        <input type="submit" value="Submit edit"/>
       </form>
     )
   }
