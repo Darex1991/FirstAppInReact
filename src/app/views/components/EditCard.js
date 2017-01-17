@@ -28,9 +28,9 @@ export default class EditCard extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} name={this.props.item.name}>
+      <form onSubmit={this.handleSubmit} name={this.props.item.id}>
         <label>
-          Name: {this.state.changedCard.name}
+          Name:
           <input type="text" name="name" value={this.state.changedCard.name} onChange={this.handleChange} />
         </label>
 
