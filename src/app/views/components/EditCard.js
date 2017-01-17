@@ -2,7 +2,8 @@ import React, {Component, PropTypes} from 'react';
 
 export default class EditCard extends Component {
   static propTypes = {
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
+    editCard: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -15,9 +16,8 @@ export default class EditCard extends Component {
   };
 
   handleChange = (event) => {
-    let eventName = event.target.name;
-    let eventValue = event.target.value;
-    const changedCard = Object.assign(this.state.changedCard, {[eventName]: eventValue});
+    const {name, value} = event.target;
+    const changedCard = Object.assign(this.state.changedCard, {[name]: value});
     this.setState({changedCard});
   };
 

@@ -6,7 +6,8 @@ import CardsFunctions from "../services/CardsFunctions";
 
 export default class CardList extends Component {
   static propTypes = {
-    cards: PropTypes.array.isRequired
+    cards: PropTypes.array.isRequired,
+    editCard: PropTypes.func.isRequired
   };
 
   constructor(props) {

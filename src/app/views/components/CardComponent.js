@@ -4,7 +4,8 @@ import EditCard from './EditCard';
 
 export default class CardComponent extends Component {
   static propTypes = {
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
+    editCard: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -15,20 +16,17 @@ export default class CardComponent extends Component {
   }
 
   displayEditForm = (event) => {
-    this.state.item.editCard = !this.state.item.editCard;
+    const item = {...this.state.item, editCard: !this.state.item.editCard};
+    this.setState({item});
     event.preventDefault();
   };
 
   render() {
-    let editForm = undefined;
-    if (this.state.item.editCard) {
-      editForm = <EditCard item={this.props.item} editCard={this.props.editCard}/>
-    }
     return (
       <div>
         <Profile item={this.props.item}/>
         <button onClick={this.displayEditForm}>Edit</button>
-        {editForm}
+        {this.state.item.editCard && <EditCard item={this.props.item} editCard={this.props.editCard}/>}
       </div>
     );
   }
