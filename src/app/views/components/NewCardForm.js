@@ -43,12 +43,12 @@ export default class NewCardForm extends Component {
       <form onSubmit={this.handleSubmit} name="test">
         <label>
           Name:
-          <input type="text" name="name" onChange={this.handleChange}/>
+          <input type="text" name="name" value={this.state.newCard.name} onChange={this.handleChange} />
         </label>
 
         <label>
           Description:
-          <input type="text" name="description" onChange={this.handleChange}/>
+          <input type="text" name="description" value={this.state.newCard.description} onChange={this.handleChange}/>
         </label>
 
         <input type="submit" value="Submit" />
