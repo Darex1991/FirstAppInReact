@@ -5,10 +5,8 @@ import CardComponent from './cardComponent';
 import CardsFunctions from "../services/CardsFunctions";
 
 export default class CardList extends Component {
-  static get propTypes() {
-    return {
-      cards: PropTypes.array.isRequired
-    }
+  static propTypes = {
+    cards: PropTypes.array.isRequired
   };
 
   constructor(props) {
@@ -26,7 +24,7 @@ export default class CardList extends Component {
   render() {
     return (
       <div>
-        { this.props.cards.map(item => <CardComponent key={item.id} item={item}/>) }
+        { this.props.cards.map(item => <CardComponent key={item.id} item={item} editCard={this.props.editCard} />) }
       </div>
     )
   }

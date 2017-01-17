@@ -31,11 +31,10 @@ export default class NewCardForm extends Component {
   };
 
   handleChange = (event) => {
-    let card = this.state.newCard;
     let eventName = event.target.name;
     let eventValue = event.target.value;
-    const newCard = Object.assign(card, {[eventName]: eventValue });
-    this.setState({newCard: newCard});
+    const newCard = Object.assign(this.state.newCard, {[eventName]: eventValue });
+    this.setState({newCard});
   };
 
   render() {

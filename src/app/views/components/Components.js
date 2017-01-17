@@ -1,6 +1,4 @@
-import React, {
-  Component
-}                     from 'react';
+import React, {Component} from 'react';
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import CardList from './cardList';
@@ -20,6 +18,7 @@ class Components extends Component {
         }, {
           id: 2,
           name: 'sasd',
+          description: ''
         }, {
           id: 3,
           name: '3asd',
@@ -34,6 +33,14 @@ class Components extends Component {
   }
   addNewCard = (card) => {
     const cards = [...this.state.cards, card];
+    this.setState({cards});
+  };
+
+  editCard = (card) => {
+    let editedCard = card;
+    let cardIndex = _.findIndex(this.state.cards, (item) => item.id == editedCard.id);
+    const cards = [...this.state.cards];
+    cards[cardIndex] = card;
     this.setState({cards});
   };
 
@@ -55,7 +62,7 @@ class Components extends Component {
           }}>
           <div className="index">
             <NewCardForm cards={this.state.cards} addNewCard={this.addNewCard}  />
-            <CardList cards={this.state.cards} addNewCard={this.addNewCard} />
+            <CardList cards={this.state.cards} addNewCard={this.addNewCard} editCard={this.editCard} />
           </div>
         </div>
       </div>

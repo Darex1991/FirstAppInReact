@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './statelessComponents.sass'
 
 export default class Profile extends Component {
-  static get propTypes() {
-    return {
-      item: React.PropTypes.object
-    };
+  static propTypes = {
+    item: React.PropTypes.object
   }
+
   isSelected = (role) => {
     return this.props.selectedRole === role;
   };
+
   render() {
     const newItem = this.props.item;
     return (
