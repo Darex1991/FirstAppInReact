@@ -4,6 +4,7 @@ import shallowCompare from 'react-addons-shallow-compare';
 import {Form, Text} from 'react-form';
 import ProfileComponent from './ProfileComponent';
 import NotificationComponent from './NotificationComponent';
+import ColorComponent from './ColorComponent';
 
 export default class SimonTask extends Component {
   constructor(props) {
@@ -64,6 +65,7 @@ export default class SimonTask extends Component {
               <form onSubmit={submitForm}>
                 <ProfileComponent />
                 <NotificationComponent />
+                <ColorComponent />
                 <button type='submit'>Submit</button>
               </form>
             )
