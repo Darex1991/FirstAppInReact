@@ -10,7 +10,7 @@ export default class ProfileComponent extends Component {
   render() {
     return (
       <div className="profile default-input">
-        <h1>Profile</h1>
+        <h2>Profile</h2>
         <div className="row">
           <div className="col-xs-6 m--b">
             <label>FirstName</label>

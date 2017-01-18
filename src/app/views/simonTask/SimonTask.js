@@ -3,6 +3,7 @@ import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import {Form, Text} from 'react-form';
 import ProfileComponent from './ProfileComponent';
+import NotificationComponent from './NotificationComponent';
 
 export default class SimonTask extends Component {
   constructor(props) {
@@ -19,27 +20,6 @@ export default class SimonTask extends Component {
 
   render() {
     const {animated, viewEntersAnim} = this.state;
-    const myForm = (
-      <Form
-        onSubmit={(values) => {
-          console.log('Success!', values)
-        }}
-        validate={({name}) => {
-          return {
-            name: !name ? 'A name is required' : undefined
-          }
-        }}
-      >
-        {({submitForm}) => {
-          return (
-            <form onSubmit={submitForm}>
-              <Text field='name'/>
-              <button type='submit'>Submit</button>
-            </form>
-          )
-        }}
-      </Form>
-    );
     return (
       <div
         className={cx({
@@ -73,11 +53,17 @@ export default class SimonTask extends Component {
                 })()
               }
           }}
+          defaultValues={{
+            emailCheckboxPremium: true,
+            textCheckboxPremium: true,
+            text2CheckboxPremium: true
+          }}
         >
           {({submitForm}) => {
             return (
               <form onSubmit={submitForm}>
                 <ProfileComponent />
+                <NotificationComponent />
                 <button type='submit'>Submit</button>
               </form>
             )
