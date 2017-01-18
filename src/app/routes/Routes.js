@@ -7,7 +7,8 @@ import { App }      from '../containers';
 import {
   Home,
   About,
-  Components
+  Components,
+  SimonTask
 }                   from '../views';
 
 const Routes = () => {
@@ -16,6 +17,7 @@ const Routes = () => {
       <IndexRoute component={Home} />
       <Route path="/components" component={Components} />
       <Route path="/about" component={About} />
+      <Route path="/simonTask" component={SimonTask} />
     </Route>
   );
 };
