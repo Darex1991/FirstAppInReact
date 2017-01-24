@@ -9,5 +9,9 @@
       "presets": ["react-optimize"]
     }
   },
-  "plugins": ["react-hot-loader/babel", "transform-runtime"]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-class-properties"]
 }

@@ -5,6 +5,7 @@ import {Form, Text} from 'react-form';
 import ProfileComponent from './ProfileComponent';
 import NotificationComponent from './NotificationComponent';
 import ColorComponent from './ColorComponent';
+import PhoneNumbersComponent from './PhoneNumbersComponent';
 
 export default class SimonTask extends Component {
   constructor(props) {
@@ -64,6 +65,7 @@ export default class SimonTask extends Component {
             return (
               <form onSubmit={submitForm}>
                 <ProfileComponent />
+                <PhoneNumbersComponent />
                 <NotificationComponent />
                 <ColorComponent />
                 <button type='submit'>Submit</button>
