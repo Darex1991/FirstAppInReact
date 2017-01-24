@@ -12,7 +12,10 @@ export default class SimonTask extends Component {
     super(props);
     this.state = {
       animated: true,
-      viewEntersAnim: true
+      viewEntersAnim: true,
+      dataBase: {
+        phones: [{id:1, name: 'asd', key: 1, value: 'val 1'},{id:2, name: 'asdasdasd', key: 2, value: 'val 122222'},{id:3, name: 'asdasdasd', key: 3, value: 'val asdasd'},{id:4, name: '222', key: 4, value: 'val213123 1'}]
+      }
     };
   }
 
@@ -65,8 +68,8 @@ export default class SimonTask extends Component {
             return (
               <form onSubmit={submitForm}>
                 <ProfileComponent />
-                <PhoneNumbersComponent />
-                <NotificationComponent />
+                <PhoneNumbersComponent dataBase={this.state.dataBase} />
+                <NotificationComponent dataBase={this.state.dataBase} />
                 <ColorComponent />
                 <button type='submit'>Submit</button>
               </form>

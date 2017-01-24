@@ -4,9 +4,21 @@ import { Form, Text, Checkbox } from 'react-form'
 export default class NotificationComponent extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      dataBase: this.props.dataBase
+    }
   }
 
   render() {
+    let fields = this.state.dataBase.phones.map( (item, i) => {
+      return (
+        <tr key={i} >
+          <td><p>{item.name} <span>({item.value}) </span></p></td>
+          <td><Checkbox field='emailCheckbox'/></td>
+          <td><Checkbox field='emailCheckboxPremium'/></td>
+        </tr>
+      )});
+
     return (
       <div className="profile default-input">
         <h2>Notification</h2>
@@ -24,16 +36,7 @@ export default class NotificationComponent extends Component {
                 <td><Checkbox field='emailCheckbox'/></td>
                 <td><Checkbox field='emailCheckboxPremium'/></td>
               </tr>
-              <tr>
-                <td><p>Text <span>(4040404)</span></p></td>
-                <td><Checkbox field='textCheckbox'/></td>
-                <td><Checkbox field='textCheckboxPremium'/></td>
-              </tr>
-              <tr>
-                <td><p>Text <span>(4040404)</span></p></td>
-                <td><Checkbox field='text2Checkbox'/></td>
-                <td><Checkbox field='text2CheckboxPremium'/></td>
-              </tr>
+              {fields}
             </tbody>
           </table>
         </div>
