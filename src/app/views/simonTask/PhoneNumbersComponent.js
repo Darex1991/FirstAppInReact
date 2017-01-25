@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import {sortBy, clone, findIndex} from "lodash";
+import React, { Component, PropTypes } from 'react';
+import { sortBy, clone, findIndex } from "lodash";
+
 import InputWithoutValue from './InputWithoutValue'
 
 export default class PhoneNumbersComponent extends Component {
@@ -30,34 +31,36 @@ export default class PhoneNumbersComponent extends Component {
 
   handleChange = (item, event) => {
     const {id} = item;
-    const  base = clone(this.props.dataBase);
+    const base = clone(this.props.dataBase);
     const itemIndex = findIndex(base.phones, (item) => item.id == id);
     base.phones[itemIndex].value = event;
     this.props.updateDataBase(base);
   };
 
   render() {
-      let changedCard = this.props.dataBase;
-      let phones = changedCard.phones.map( (item, i) => {
-        return (
-            <div className="col-xs-12" key={i} >
-              <div className='col-xs-3'>
-             <button disabled={item.key == 1} onClick={() =>this.goUp(item, i)}>GO UP</button>
-             <button disabled={item.key == this.props.dataBase.phones.length} onClick={() =>this.goDown(item, i)}>GO DOWN</button>
-             </div>
-            <div className='col-xs-3'>
-              {item.name}
-             </div>
-             <div className='col-xs-3'>
-               <InputWithoutValue value={item.value} onChange={event => {this.handleChange(item, event.target.value)} } />
-             </div>
+    let changedCard = this.props.dataBase;
+    let phones = changedCard.phones.map( (item, i) => {
+      return (
+        <div className="col-xs-12" key={i}>
+          <div className='col-xs-3'>
+            <button disabled={ item.key == 1 } onClick={ () => this.goUp(item, i) }> GO UP </button>
+            <button disabled={ item.key == this.props.dataBase.phones.length } onClick={ () => this.goDown(item, i) }> GO DOWN </button>
           </div>
-          )});
+
+          <div className='col-xs-3'>
+            { item.name }
+          </div>
+
+          <div className='col-xs-3'>
+            <InputWithoutValue value={ item.value } onChange={ event => { this.handleChange(item, event.target.value) } } />
+          </div>
+        </div>
+      )});
 
     return (
       <div className="phone default-input">
-        <h2>Phone</h2>
-        {phones}
+        <h2> Phone </h2>
+        { phones }
       </div>
     )
   }

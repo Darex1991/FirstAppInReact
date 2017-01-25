@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Form } from 'react-form';
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
-import {Form, Text} from 'react-form';
+
 import ProfileComponent from './ProfileComponent';
 import NotificationComponent from './NotificationComponent';
 import ColorComponent from './ColorComponent';
@@ -43,7 +44,7 @@ export default class SimonTask extends Component {
             console.log('Success!', values)
           }}
           validate={ values => {
-            const { firstName, lastName, email, password, password2} = values;
+            const { firstName, lastName, email, password, password2 } = values;
             return {
                 firstName: !firstName ? 'First name is required' : undefined,
                 lastName: !lastName ? 'Last name is required' : undefined,
@@ -75,7 +76,7 @@ export default class SimonTask extends Component {
                 <PhoneNumbersComponent dataBase={this.state.dataBase} updateDataBase={this.updateDataBase} />
                 <NotificationComponent dataBase={this.state.dataBase} />
                 <ColorComponent />
-                <button type='submit'>Submit</button>
+                <button type='submit'> Submit </button>
               </form>
             )
           }}
