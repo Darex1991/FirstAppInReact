@@ -2,19 +2,20 @@ import React, {Component, PropTypes} from 'react';
 import { Form, Text, Checkbox } from 'react-form'
 
 export default class NotificationComponent extends Component {
+  static propTypes = {
+    dataBase: PropTypes.array.isRequired
+  };
+
   constructor(props){
     super(props);
-    this.state = {
-      dataBase: this.props.dataBase
-    }
   }
 
   render() {
-    let fields = this.state.dataBase.phones.map( (item, i) => {
+    let fields = this.props.dataBase.phones.map( (item, i) => {
       return (
         <tr key={i} >
+          <td>{item.checked}</td>
           <td><p>{item.name} <span>({item.value}) </span></p></td>
-          <td><Checkbox field='emailCheckbox'/></td>
           <td><Checkbox field='emailCheckboxPremium'/></td>
         </tr>
       )});
