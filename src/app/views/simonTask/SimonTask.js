@@ -15,7 +15,7 @@ export default class SimonTask extends Component {
       animated: true,
       viewEntersAnim: true,
       dataBase: {
-        phones: [{id:1, name: 'asd', key: 1, value: 'val 1', checked: 'true'},{id:2, name: 'asdasdasd', key: 2, value: 'val 122222'},{id:3, name: 'asdasdasd', key: 3, value: 'val asdasd'},{id:4, name: '222', key: 4, value: 'val213123 1', checked: 'true'}]
+        phones: [{ id:1, name: 'asd', key: 1, value: 'val 1', checked: true, highPriority: true },{ id:2, name: 'asdasdasd', key: 2, value: 'val 122222', checked: false, highPriority: false  },{ id:3, name: 'asdasdasd', key: 3, value: 'val asdasd', checked: false, highPriority: true },{ id:4, name: '222', key: 4, value: 'val213123 1', checked: true, highPriority: false }]
       }
     };
   }
@@ -29,10 +29,10 @@ export default class SimonTask extends Component {
   };
 
   render() {
-    const {animated, viewEntersAnim} = this.state;
+    const { animated, viewEntersAnim } = this.state;
     return (
       <div
-        className={cx({
+        className={cx ({
           'animatedViews': animated,
           'view-enter': viewEntersAnim
         })}>
@@ -40,7 +40,7 @@ export default class SimonTask extends Component {
           SimonTask
         </h1>
         <Form
-          onSubmit={(values) => {
+          onSubmit={ (values) => {
             console.log('Success!', values)
           }}
           validate={ values => {
@@ -69,12 +69,12 @@ export default class SimonTask extends Component {
             text2CheckboxPremium: true
           }}
         >
-          {({submitForm}) => {
+          {({ submitForm }) => {
             return (
               <form onSubmit={submitForm}>
                 <ProfileComponent />
-                <PhoneNumbersComponent dataBase={this.state.dataBase} updateDataBase={this.updateDataBase} />
-                <NotificationComponent dataBase={this.state.dataBase} />
+                <PhoneNumbersComponent dataBase={ this.state.dataBase } updateDataBase={ this.updateDataBase } />
+                <NotificationComponent dataBase={ this.state.dataBase } updateDataBase={ this.updateDataBase } />
                 <ColorComponent />
                 <button type='submit'> Submit </button>
               </form>

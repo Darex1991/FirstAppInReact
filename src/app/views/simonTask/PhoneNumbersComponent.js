@@ -5,7 +5,7 @@ import InputWithoutValue from './InputWithoutValue'
 
 export default class PhoneNumbersComponent extends Component {
   static propTypes = {
-    dataBase: PropTypes.array.isRequired,
+    dataBase: PropTypes.object.isRequired,
     updateDataBase: PropTypes.func.isRequired
   };
 
