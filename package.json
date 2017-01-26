@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev webpack",
-    "test": "NODE_ENV=test nyc mocha test/.setup.js test/**/*.spec.js --recursive",
+    "test": "NODE_ENV=test nyc mocha --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "start": "NODE_ENV=dev node server.hot.reload",
@@ -58,6 +58,7 @@
     "expose-loader": "^0.7.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",

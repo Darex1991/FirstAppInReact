@@ -23,6 +23,9 @@ const config = {
       test: /\.scss$/,
       loader: 'style!css!postcss!sass'
     }, {
+      test: /\.sass$/,
+      loader: 'style!css!postcss!sass'
+    }, {
       test: /\.css$/,
       loader: 'style!css!postcss'
     }, {
