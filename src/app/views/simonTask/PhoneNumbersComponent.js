@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { sortBy, clone, findIndex } from "lodash";
 
 import InputWithoutValue from './InputWithoutValue'
+import AddNewPhoneComponent from './AddNewPhoneComponent'
 
 export default class PhoneNumbersComponent extends Component {
   static propTypes = {
@@ -60,6 +61,7 @@ export default class PhoneNumbersComponent extends Component {
     return (
       <div className="phone default-input">
         <h2> Phone </h2>
+        <AddNewPhoneComponent dataBase={ this.props.dataBase } updateDataBase={ this.props.updateDataBase } />
         { phones }
       </div>
     )
