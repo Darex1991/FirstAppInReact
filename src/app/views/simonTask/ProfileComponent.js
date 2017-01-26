@@ -4,10 +4,6 @@ import { Text } from 'react-form'
 import './defaultInput.sass'
 
 export default class ProfileComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="profile default-input">

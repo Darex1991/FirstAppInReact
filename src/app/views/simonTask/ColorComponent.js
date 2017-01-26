@@ -2,10 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { Form, Text, Checkbox } from 'react-form'
 
 export default class ColorComponent extends Component {
-  constructor(props){
-    super(props);
-  }
-
   render() {
     return (
       <div className="profile default-input">
