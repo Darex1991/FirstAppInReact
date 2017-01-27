@@ -12,12 +12,13 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev webpack",
-    "test": "NODE_ENV=test nyc mocha --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
+    "test": "NODE_ENV=test nyc mocha --reporter mochawesome --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
+    "test-d": "NODE_ENV=test nyc mocha --reporter mochawesome --inspect --debug-brk --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "start": "NODE_ENV=dev node server.hot.reload",
     "dev-win": "set NODE_ENV=dev && webpack",
-    "test-win": "set NODE_ENV=test && nyc mocha test/.setup.js test/**/*.spec.js --compilers js:babel-core/register --recursive",
+    "test-win": "set NODE_ENV=test && nyc mocha --require ignore-styles test/.setup.js test/**/*.spec.js --compilers js:babel-core/register --recursive",
     "prod-win": "set NODE_ENV=production && webpack -p --config webpack.production.js ",
     "start-win": "set NODE_ENV=dev && node server.hot.reload"
   },
@@ -62,6 +63,7 @@
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
+    "mochawesome": "^2.0.2",
     "node-sass": "^3.13.0",
     "nyc": "^10.0.0",
     "postcss-loader": "^1.1.1",
