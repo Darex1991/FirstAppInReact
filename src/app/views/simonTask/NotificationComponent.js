@@ -32,7 +32,7 @@ export default class NotificationComponent extends Component {
   render() {
     return (
       <div className="profile default-input">
-        <h2> Notification </h2>
+        <h2>Notification</h2>
 
         <div>
           <table>
