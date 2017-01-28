@@ -1,9 +1,9 @@
 import React                from 'react';
-import {shallow}          from 'enzyme';
+import {shallow}            from 'enzyme';
 import chai, {expect}       from 'chai';
 import dirtyChai            from 'dirty-chai';
-import {keys}             from "lodash";
-import AddNewPhoneComponent       from '../../../src/app/views/simonTask/AddNewPhoneComponent';
+import {keys}               from "lodash";
+import AddNewPhoneComponent from '../../../src/app/views/simonTask/AddNewPhoneComponent';
 
 chai.use(dirtyChai);
 
