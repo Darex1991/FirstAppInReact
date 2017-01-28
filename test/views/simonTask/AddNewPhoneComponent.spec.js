@@ -34,10 +34,21 @@ describe('AddNewPhoneComponent ', () => {
     expect(wrapper.find('button').text()).to.equal('Add new');
   });
 
-  it('should change state.displayForm', () => {
-    expect(wrapper.state().displayForm).to.equal(false);
-    wrapper.instance().seeForm();
-    expect(wrapper.state().displayForm).to.equal(true);
+  describe('#seeForm', () => {
+    it('should change state.displayForm', () => {
+      expect(wrapper.state().displayForm).to.equal(false);
+      wrapper.instance().seeForm();
+      expect(wrapper.state().displayForm).to.equal(true);
+    });
+
+    it('should change state.displayForm using button', () => {
+      expect(wrapper.state().displayForm).to.equal(false);
+      expect(wrapper.find('button').first().text()).to.equal('Add new');
+
+      wrapper.find('button').first().simulate('click');
+
+      expect(wrapper.state().displayForm).to.equal(true);
+    });
   });
 
   it('should display markup after change state.displayForm', () => {
@@ -101,5 +112,19 @@ describe('AddNewPhoneComponent ', () => {
       expect(wrapper.instance().props.dataBase.phones.length).to.equal(5);
     });
 
+    it('should add new object after click btn', () => {
+      wrapper.instance().seeForm();
+
+      let textField = wrapper.find('InputWithoutValue').first();
+      let event = {key: 'Enter', target: {value: 'mock', name: 'name'}};
+      textField.simulate('change', event);
+
+      expect(wrapper.instance().props.dataBase.phones.length).to.equal(4);
+      expect(wrapper.find('button').last().text()).to.equal('Add');
+
+      wrapper.find('button').last().simulate('click');
+
+      expect(wrapper.instance().props.dataBase.phones.length).to.equal(5);
+    });
   });
 });

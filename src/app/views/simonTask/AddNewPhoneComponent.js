@@ -59,7 +59,7 @@ export default class AddNewPhoneComponent extends Component {
               <label> Value </label>
               <InputWithoutValue name='value' value={ this.state.newPhone.value } onChange={ this.handleChange }/>
             </div>
-            <button onClick={ this.addNew }> Add </button>
+            <button onClick={ this.addNew }>Add</button>
           </div>
         }
       </div>
