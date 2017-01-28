@@ -10,18 +10,18 @@ export default class PhoneNumbersComponent extends Component {
     updateDataBase: PropTypes.func.isRequired
   };
 
-  goUp = (item, index) =>{
+  updatePosition = (item, index, type) =>{
     const copyDataBase = clone(this.props.dataBase);
-    copyDataBase.phones[index - 1].key += 1;
-    copyDataBase.phones[index].key -= 1;
-    copyDataBase.phones = sortBy(copyDataBase.phones, 'key');
-    this.props.updateDataBase(copyDataBase);
-  };
 
-  goDown = (item, index) =>{
-    const copyDataBase = clone(this.props.dataBase);
-    copyDataBase.phones[index + 1].key -= 1;
-    copyDataBase.phones[index].key += 1;
+    if(type == 'up'){
+      copyDataBase.phones[index - 1].key += 1;
+      copyDataBase.phones[index].key -= 1;
+    }
+    else {
+      copyDataBase.phones[index + 1].key -= 1;
+      copyDataBase.phones[index].key += 1;
+    }
+
     copyDataBase.phones = sortBy(copyDataBase.phones, 'key');
     this.props.updateDataBase(copyDataBase);
   };
@@ -40,8 +40,8 @@ export default class PhoneNumbersComponent extends Component {
       return (
         <div className="col-xs-12" key={index}>
           <div className='col-xs-3'>
-            <button disabled={ item.key == 1 } onClick={ () => this.goUp(item, index) }> GO UP </button>
-            <button disabled={ item.key == this.props.dataBase.phones.length } onClick={ () => this.goDown(item, index) }> GO DOWN </button>
+            <button disabled={ item.key == 1 } onClick={ () => this.updatePosition(item, index, 'up') }> GO UP </button>
+            <button disabled={ item.key == this.props.dataBase.phones.length } onClick={ () => this.updatePosition(item, index, 'down') }> GO DOWN </button>
           </div>
 
           <div className='col-xs-3'>
