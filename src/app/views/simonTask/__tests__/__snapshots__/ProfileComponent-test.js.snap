@@ -1,0 +1,50 @@
+exports[`test Should render ProfileComponent correctly 1`] = `
+<div
+  className="profile default-input">
+  <h2>
+     Profile 
+  </h2>
+  <div
+    className="row">
+    <div
+      className="col-xs-6 m--b">
+      <label>
+         FirstName 
+      </label>
+      <FormInputText
+        field="firstName" />
+    </div>
+    <div
+      className="col-xs-6 m--b">
+      <label>
+         LastName 
+      </label>
+      <FormInputText
+        field="lastName" />
+    </div>
+    <div
+      className="col-xs-12 m--b">
+      <label>
+         Email 
+      </label>
+      <FormInputText
+        field="email"
+        type="email" />
+    </div>
+    <div
+      className="col-xs-6 m--b">
+      <FormInputText
+        field="password"
+        placeholder="Password"
+        type="password" />
+    </div>
+    <div
+      className="col-xs-6 m--b">
+      <FormInputText
+        field="password2"
+        placeholder="Password confirm"
+        type="password" />
+    </div>
+  </div>
+</div>
+`;
