@@ -1,0 +1,15 @@
+exports[`test Should render ColorComponent correctly 1`] = `
+<div
+  className="profile default-input">
+  <h2>
+    Color Schema
+  </h2>
+  <div>
+    <FormInputCheckbox
+      field="darkColorSchema" />
+    <p>
+      Dark schema
+    </p>
+  </div>
+</div>
+`;
