@@ -1,0 +1,503 @@
+exports[`test Should render SimonTask correctly 1`] = `
+<div
+  className="animatedViews view-enter">
+  <h1>
+     SimonTask 
+  </h1>
+  <div
+    className="ReactForm">
+    <form
+      onSubmit={[Function]}>
+      <div
+        className="profile default-input">
+        <h2>
+           Profile 
+        </h2>
+        <div
+          className="row">
+          <div
+            className="col-xs-6 m--b">
+            <label>
+               FirstName 
+            </label>
+            <div
+              className="FormInput">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-xs-6 m--b">
+            <label>
+               LastName 
+            </label>
+            <div
+              className="FormInput">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-xs-12 m--b">
+            <label>
+               Email 
+            </label>
+            <div
+              className="FormInput">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="email"
+                value="" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-xs-6 m--b">
+            <div
+              className="FormInput">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+                value="" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-xs-6 m--b">
+            <div
+              className="FormInput">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Password confirm"
+                type="password"
+                value="" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="phone default-input">
+        <h2>
+           Phone 
+        </h2>
+        <div>
+          <button
+            onClick={[Function]}>
+            Add new
+          </button>
+        </div>
+        <div
+          className="col-xs-12">
+          <div
+            className="col-xs-3">
+            <button
+              disabled={true}
+              onClick={[Function]}>
+               GO UP 
+            </button>
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO DOWN 
+            </button>
+          </div>
+          <div
+            className="col-xs-3">
+            asd
+          </div>
+          <div
+            className="col-xs-3">
+            <div
+              className="FormInput -hasError">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="val 1" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-xs-12">
+          <div
+            className="col-xs-3">
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO UP 
+            </button>
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO DOWN 
+            </button>
+          </div>
+          <div
+            className="col-xs-3">
+            asdasdasd
+          </div>
+          <div
+            className="col-xs-3">
+            <div
+              className="FormInput -hasError">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="val 122222" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-xs-12">
+          <div
+            className="col-xs-3">
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO UP 
+            </button>
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO DOWN 
+            </button>
+          </div>
+          <div
+            className="col-xs-3">
+            asdasdasd
+          </div>
+          <div
+            className="col-xs-3">
+            <div
+              className="FormInput -hasError">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="val asdasd" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-xs-12">
+          <div
+            className="col-xs-3">
+            <button
+              disabled={false}
+              onClick={[Function]}>
+               GO UP 
+            </button>
+            <button
+              disabled={true}
+              onClick={[Function]}>
+               GO DOWN 
+            </button>
+          </div>
+          <div
+            className="col-xs-3">
+            222
+          </div>
+          <div
+            className="col-xs-3">
+            <div
+              className="FormInput -hasError">
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                value="val213123 1" />
+              <div
+                className="FormError"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="profile default-input">
+        <h2>
+          Notification
+        </h2>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                   
+                </th>
+                <th>
+                  Standard Prior
+                </th>
+                <th>
+                  High Prior
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                     Email 
+                    <span>
+                      (asdasd@asdasd.pl)
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <div
+                    className="FormInput">
+                    <input
+                      checked={false}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="checkbox" />
+                    <div
+                      className="FormError"
+                      style={
+                        Object {
+                          "display": "none",
+                        }
+                      }>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    className="FormInput">
+                    <input
+                      checked={true}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="checkbox" />
+                    <div
+                      className="FormError"
+                      style={
+                        Object {
+                          "display": "none",
+                        }
+                      }>
+                      
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    asd
+                     
+                    <span>
+                      (
+                      val 1
+                      ) 
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <input
+                    checked={true}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+                <td>
+                  <input
+                    checked={true}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    asdasdasd
+                     
+                    <span>
+                      (
+                      val 122222
+                      ) 
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <input
+                    checked={false}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+                <td>
+                  <input
+                    checked={false}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    asdasdasd
+                     
+                    <span>
+                      (
+                      val asdasd
+                      ) 
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <input
+                    checked={false}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+                <td>
+                  <input
+                    checked={true}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    222
+                     
+                    <span>
+                      (
+                      val213123 1
+                      ) 
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <input
+                    checked={true}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+                <td>
+                  <input
+                    checked={false}
+                    onChange={[Function]}
+                    type="checkbox" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div
+        className="profile default-input">
+        <h2>
+          Color Schema
+        </h2>
+        <div>
+          <div
+            className="FormInput">
+            <input
+              checked={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="checkbox" />
+            <div
+              className="FormError"
+              style={
+                Object {
+                  "display": "none",
+                }
+              }>
+              
+            </div>
+          </div>
+          <p>
+            Dark schema
+          </p>
+        </div>
+      </div>
+      <button
+        type="submit">
+         Submit 
+      </button>
+    </form>
+  </div>
+</div>
+`;

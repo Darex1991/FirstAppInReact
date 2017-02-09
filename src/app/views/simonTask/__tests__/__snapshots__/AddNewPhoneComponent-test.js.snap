@@ -1,0 +1,8 @@
+exports[`test Should render AddNewPhoneComponent correctly 1`] = `
+<div>
+  <button
+    onClick={[Function]}>
+    Add new
+  </button>
+</div>
+`;

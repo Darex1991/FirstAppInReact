@@ -13,7 +13,10 @@
   "scripts": {
     "dev": "NODE_ENV=dev webpack",
     "test": "NODE_ENV=test nyc mocha --reporter mochawesome --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
+    "jest": "NODE_ENV=test && node --harmony ./node_modules/.bin/jest -u",
+    "jest-snapshot": "jest-snapshot-generate ./src/app/views/simonTask/",
     "test-d": "NODE_ENV=test nyc mocha --reporter mochawesome --inspect --debug-brk --require ignore-styles test/.setup.js test/**/*.spec.js --recursive",
+    "test-da": "./node_modules/iron-mocha/bin/iron-mocha mocha test/**/*.spec.js ",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "start": "NODE_ENV=dev node server.hot.reload",
@@ -59,7 +62,10 @@
     "expose-loader": "^0.7.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
+    "identity-obj-proxy": "^3.0.0",
     "ignore-styles": "^5.0.1",
+    "jest": "^18.1.0",
+    "jest-snapshot-generate": "^1.0.0",
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
@@ -69,6 +75,7 @@
     "postcss-loader": "^1.1.1",
     "precss": "^1.4.0",
     "react-addons-test-utils": "^15.4.1",
+    "react-test-renderer": "^15.4.2",
     "sass-loader": "^4.0.2",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
@@ -85,6 +92,7 @@
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
+    "iron-mocha": "^1.0.3",
     "jquery": "^2.2.1",
     "object-assign": "^4.1.0",
     "react": "^15.4.1",
@@ -100,5 +108,11 @@
     "react-tap-event-plugin": "^2.0.1",
     "superagent": "^3.0.0",
     "whatwg-fetch": "^2.0.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|sass)$": "identity-obj-proxy"
+    }
   }
 }
