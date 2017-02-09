@@ -1,0 +1,152 @@
+exports[`test Should render PhoneNumbersComponent correctly 1`] = `
+<div
+  className="phone default-input">
+  <h2>
+     Phone 
+  </h2>
+  <AddNewPhoneComponent
+    dataBase={
+      Object {
+        "phones": Array [
+          Object {
+            "checked": true,
+            "highPriority": true,
+            "id": 1,
+            "key": 1,
+            "name": "asd",
+            "value": "val 1",
+          },
+          Object {
+            "checked": false,
+            "highPriority": false,
+            "id": 2,
+            "key": 2,
+            "name": "asdasdasd",
+            "value": "val 122222",
+          },
+          Object {
+            "checked": false,
+            "highPriority": true,
+            "id": 3,
+            "key": 3,
+            "name": "asdasdasd",
+            "value": "val asdasd",
+          },
+          Object {
+            "checked": true,
+            "highPriority": false,
+            "id": 4,
+            "key": 4,
+            "name": "222",
+            "value": "val213123 1",
+          },
+        ],
+      }
+    }
+    updateDataBase={[Function]} />
+  <div
+    className="col-xs-12">
+    <div
+      className="col-xs-3">
+      <button
+        disabled={true}
+        onClick={[Function]}>
+         GO UP 
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO DOWN 
+      </button>
+    </div>
+    <div
+      className="col-xs-3">
+      asd
+    </div>
+    <div
+      className="col-xs-3">
+      <InputWithoutValue
+        onChange={[Function]}
+        value="val 1" />
+    </div>
+  </div>
+  <div
+    className="col-xs-12">
+    <div
+      className="col-xs-3">
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO UP 
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO DOWN 
+      </button>
+    </div>
+    <div
+      className="col-xs-3">
+      asdasdasd
+    </div>
+    <div
+      className="col-xs-3">
+      <InputWithoutValue
+        onChange={[Function]}
+        value="val 122222" />
+    </div>
+  </div>
+  <div
+    className="col-xs-12">
+    <div
+      className="col-xs-3">
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO UP 
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO DOWN 
+      </button>
+    </div>
+    <div
+      className="col-xs-3">
+      asdasdasd
+    </div>
+    <div
+      className="col-xs-3">
+      <InputWithoutValue
+        onChange={[Function]}
+        value="val asdasd" />
+    </div>
+  </div>
+  <div
+    className="col-xs-12">
+    <div
+      className="col-xs-3">
+      <button
+        disabled={false}
+        onClick={[Function]}>
+         GO UP 
+      </button>
+      <button
+        disabled={true}
+        onClick={[Function]}>
+         GO DOWN 
+      </button>
+    </div>
+    <div
+      className="col-xs-3">
+      222
+    </div>
+    <div
+      className="col-xs-3">
+      <InputWithoutValue
+        onChange={[Function]}
+        value="val213123 1" />
+    </div>
+  </div>
+</div>
+`;
