@@ -1,0 +1,143 @@
+exports[`test Should render NotificationComponent correctly 1`] = `
+<div
+  className="profile default-input">
+  <h2>
+    Notification
+  </h2>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>
+             
+          </th>
+          <th>
+            Standard Prior
+          </th>
+          <th>
+            High Prior
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <p>
+               Email 
+              <span>
+                (asdasd@asdasd.pl)
+              </span>
+            </p>
+          </td>
+          <td>
+            <FormInputCheckbox
+              field="emailCheckbox" />
+          </td>
+          <td>
+            <FormInputCheckbox
+              field="emailCheckboxPremium" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              asd
+               
+              <span>
+                (
+                val 1
+                ) 
+              </span>
+            </p>
+          </td>
+          <td>
+            <input
+              checked={true}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+          <td>
+            <input
+              checked={true}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              asdasdasd
+               
+              <span>
+                (
+                val 122222
+                ) 
+              </span>
+            </p>
+          </td>
+          <td>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+          <td>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              asdasdasd
+               
+              <span>
+                (
+                val asdasd
+                ) 
+              </span>
+            </p>
+          </td>
+          <td>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+          <td>
+            <input
+              checked={true}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              222
+               
+              <span>
+                (
+                val213123 1
+                ) 
+              </span>
+            </p>
+          </td>
+          <td>
+            <input
+              checked={true}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+          <td>
+            <input
+              checked={false}
+              onChange={[Function]}
+              type="checkbox" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
