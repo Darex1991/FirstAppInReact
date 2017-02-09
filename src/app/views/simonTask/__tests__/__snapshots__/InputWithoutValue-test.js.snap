@@ -1,0 +1,9 @@
+exports[`test Should render InputWithoutValue correctly 1`] = `
+<FormInput
+  errorBefore={undefined}
+  field={undefined}
+  isForm={undefined}
+  showErrors={undefined}>
+  [Function]
+</FormInput>
+`;
